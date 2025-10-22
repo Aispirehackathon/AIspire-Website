@@ -182,7 +182,55 @@ body.dark #progressBar {
       border-radius:10px; background: linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#fff;
       text-decoration:none; box-shadow: 0 8px 28px rgba(0,123,255,0.10); transition: transform .22s, box-shadow .22s, opacity .2s;
     }
-    .social-btn:hover{ transform: translateY(-4px) scale(1.06); box-shadow: 0 22px 60px rgba(0,123,255,0.16) }
+    /* Instagram hover effect */
+.social-btn[title="Instagram"] {
+  background: #000; /* default */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.social-btn[title="Instagram"]:hover {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png') center/cover no-repeat;
+  transform: scale(1.1);
+}
+
+.social-btn[title="Instagram"] svg {
+  transition: opacity 0.3s ease;
+}
+
+.social-btn[title="Instagram"]:hover svg {
+  opacity: 0;
+}
+
+.social-btn[title="Instagram"]:hover {
+  box-shadow: 0 0 20px rgba(255, 64, 128, 0.5);
+}
+
+/* LinkedIn hover effect */
+.social-btn[title="LinkedIn"] {
+  background: #000; /* default */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.social-btn[title="LinkedIn"]:hover {
+  background: url('https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg') center/cover no-repeat;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(10, 102, 194, 0.5);
+}
+
+.social-btn[title="LinkedIn"] svg {
+  transition: opacity 0.3s ease;
+}
+
+.social-btn[title="LinkedIn"]:hover svg {
+  opacity: 0;
+}
+
+
+    
 
     /* ---------- feedback animated button ---------- */
     .feedback-btn{
@@ -659,6 +707,5 @@ particlesJS("particles-js", {
 
 </body>
 </html>
-
 
 
