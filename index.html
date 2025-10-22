@@ -391,6 +391,42 @@ body.dark .intro-screen {
   100% { opacity: 0; visibility: hidden; }
 }
 
+/* ---------- Mobile header fix ---------- */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 16px;
+    gap: 8px;
+  }
+  .logo {
+    gap: 8px;
+  }
+  .logo-img {
+    width: 50px;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+  nav a {
+    font-size: 0.95rem;
+  }
+  .toggle-container {
+    align-self: center;
+  }
+}
+
+/* ---------- Space below feedback button ---------- */
+footer {
+  padding-bottom: 40px;
+}
 
 
   </style>
@@ -716,7 +752,6 @@ particlesJS("particles-js", {
 
 </body>
 </html>
-
 
 
 
