@@ -158,13 +158,21 @@ body.dark #progressBar {
 
     /* ---------- download btn ---------- */
     .download-section{ margin:64px 0; text-align:center }
-    .download-btn{
-      display:inline-block; padding:12px 36px; border-radius:999px;
-      background: linear-gradient(90deg,var(--accent-1),var(--accent-2));
-      color:#fff; font-weight:700; border:0; cursor:pointer;
-      box-shadow: 0 10px 34px rgba(0,123,255,0.12); transition: transform .25s, box-shadow .25s, filter .25s;
-    }
-    .download-btn:hover{ transform: translateY(-6px) scale(1.04); box-shadow: 0 28px 80px rgba(0,123,255,0.16); filter: brightness(1.06) }
+    .download-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #007BFF, #00C6FF);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
 
     /* ---------- team & socials ---------- */
     .team{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:10px }
@@ -466,12 +474,13 @@ body.dark .intro-screen {
     </section>
 
     <!-- download -->
-    <section class="download-section" aria-labelledby="downloadTitle">
-      <h2 id="downloadTitle" class="center">Get AIspire</h2>
-      <div class="center">
-        <button class="download-btn" id="downloadBtn" onclick="window.location.href='APP_DOWNLOAD_LINK_HERE'">Download AIspire</button>
-      </div>
-    </section>
+   <section class="download-section" aria-labelledby="downloadTitle">
+  <h2 id="downloadTitle" class="center">Get AIspire</h2>
+  <div class="center">
+    <a href="AIspire.pdf" download class="download-btn">Download AIspire</a>
+  </div>
+</section>
+
 
     <!-- team -->
     <section id="team">
@@ -707,5 +716,6 @@ particlesJS("particles-js", {
 
 </body>
 </html>
+
 
 
