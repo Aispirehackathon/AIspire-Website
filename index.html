@@ -38,6 +38,16 @@ I have this code that worked for one image, I want to make some edits so that it
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top: 6px solid #00c6ff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1.2s linear infinite;
+}
+
+
 #preloader.fade-out {
   opacity: 0;
   visibility: hidden;
@@ -483,11 +493,12 @@ footer {
   <body>
   <!-- Loading Screen -->
   <div id="preloader">
-    <div class="loader">
-      <img src="logo.png" alt="Loading..." />
-      <p>Loading AIspire...</p>
-    </div>
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>Loading AIspire...</p>
   </div>
+</div>
+
 
 
   <div class="intro-screen">
