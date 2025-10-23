@@ -392,59 +392,6 @@ body.dark .member:hover {
   }
 }
 
-/* ---------- INTRO ANIMATION ---------- */
-.intro-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #ffffff, #e3f2ff);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 99999;
-  animation: introFadeOut 2s ease 2.5s forwards;
-}
-
-body.dark .intro-screen {
-  background: radial-gradient(circle at center, #0f1622, #1b2538);
-}
-
-.intro-logo {
-  width: 120px;
-  opacity: 0;
-  transform: scale(0.8);
-  animation: introPop 1.5s ease forwards;
-}
-
-.intro-title {
-  font-family: 'Trebuchet MS', sans-serif;
-  font-size: 2.8rem;
-  color: #007bff;
-  opacity: 0;
-  margin-top: 20px;
-  letter-spacing: 2px;
-  animation: introSlide 1.5s ease 1s forwards;
-}
-
-@keyframes introPop {
-  0% { opacity: 0; transform: scale(0.8); }
-  60% { opacity: 1; transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-@keyframes introSlide {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes introFadeOut {
-  0% { opacity: 1; visibility: visible; }
-  100% { opacity: 0; visibility: hidden; }
-}
-
 /* ---------- Mobile header fix ---------- */
 @media (max-width: 600px) {
   header {
@@ -482,6 +429,24 @@ footer {
   padding-bottom: 40px;
 }
 
+.intro-screen {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.intro-screen.play-intro {
+  opacity: 1;
+  visibility: visible;
+  animation: introSequence 3s ease forwards;
+}
+
+@keyframes introSequence {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
+
 
   </style>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
@@ -497,16 +462,6 @@ footer {
     <p>Loading AIspire...</p>
   </div>
 </div>
-
-
-
-  <div class="intro-screen">
-  <div class="intro-content">
-    <img src="logo.png" alt="AIspire Logo" class="intro-logo">
-    <h1 class="intro-title">AIspire</h1>
-  </div>
-  </div>
-
 
   <div id="particles-js"></div>
 
@@ -802,19 +757,6 @@ particlesJS("particles-js", {
 </script>
 
 <script>
-  // Disable scrolling during intro
-  document.body.style.overflow = 'hidden';
-
-  window.addEventListener('load', () => {
-    const intro = document.querySelector('.intro-screen');
-    setTimeout(() => {
-      intro.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }, 3000); // Hide intro after 3 seconds
-  });
-</script>
-
-<script>
   window.addEventListener("load", function() {
     const preloader = document.getElementById("preloader");
     setTimeout(() => {
@@ -822,7 +764,6 @@ particlesJS("particles-js", {
     }, 300); // small delay before fading out
   });
 </script>
-
 
 </body>
 </html>
