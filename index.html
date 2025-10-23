@@ -1,3 +1,4 @@
+I have this code that worked for one image, I want to make some edits so that it works for two images, logo-light should show up in light mode and should switch the position to logo-dark when toggled to dark mode, to be clear I need the logo to switch in header while, logo-light when in light theme, and logo-dark in dark theme, Dark mode toggle button already exists so try not to make the code duplicate or redeclare causing errors and read the given code carefully
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -151,10 +152,6 @@ body.dark #progressBar {
 
     .logo{ display:flex; gap:12px; align-items:center; perspective:700px; }
     .logo-img{ width:72px; height:auto; transition: transform .45s cubic-bezier(.2,.9,.3,1) }
-    /* Light/Dark logo switch */
-.logo-dark { display: none; }
-body.dark .logo-light { display: none; }
-body.dark .logo-dark { display: inline-block; }
     .logo:hover .logo-img{ transform: rotateY(12deg) rotateX(6deg) scale(1.03) }
     .logo-text{ font-family:'Trebuchet MS',sans-serif; font-size:1.6rem; color:var(--accent-1); font-weight:700 }
     body.dark .logo-text{ color:#9be9ff }
@@ -514,12 +511,11 @@ footer {
   </div>
 
   <!-- header -->
-  <div class="logo" role="img" aria-label="AIspire logo">
-  <img src="logo-light.png" alt="AIspire Logo" class="logo-img logo-light">
-  <img src="logo-dark.png" alt="AIspire Logo Dark" class="logo-img logo-dark">
-  <div class="logo-text">AIspire</div>
-  </div>
-
+  <header>
+    <div class="logo" role="img" aria-label="AIspire logo">
+      <img src="logo.png" alt="AIspire Logo" class="logo-img">
+      <div class="logo-text">AIspire</div>
+    </div>
 
     <nav aria-label="Primary">
       <a href="#problem">Problem</a>
