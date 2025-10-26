@@ -6,7 +6,6 @@
   <title>AIspire | Career Guidance Powered by AI</title>
   <meta name="description" content="AIspire — AI-based aptitude tests and personalised career guidance for secondary students." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
   <style>
     :root{
       --accent-1:#007bff;
@@ -20,15 +19,13 @@
       --text-dark:#eef7ff;
       --muted:#6b7280;
     }
-
-    /* Preloader Styles */
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000; /* black background */
+  background-color: #000; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +33,6 @@
   z-index: 9999;
   transition: opacity 0.8s ease, visibility 0.8s ease;
 }
-
 .spinner {
   border: 6px solid rgba(255, 255, 255, 0.2);
   border-top: 6px solid #00c6ff;
@@ -45,19 +41,15 @@
   height: 80px;
   animation: spin 1.2s linear infinite;
 }
-
-
 #preloader.fade-out {
   opacity: 0;
   visibility: hidden;
 }
-
 #preloader .loader img {
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
 }
-
 #preloader p {
   color: #fff;
   font-size: 1.2rem;
@@ -65,14 +57,10 @@
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-
-    
-    /* Particle background setup */
 #particles-js {
   position: fixed;
   top: 0;
@@ -82,9 +70,6 @@
   z-index: -1;
   background: var(--bg);
 }
-
-
-    /* ---------- reset & base ---------- */
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{
@@ -99,25 +84,21 @@
       background: linear-gradient(180deg,var(--bg-dark-1),var(--bg-dark-2));
       color:var(--text-dark);
     }
-
-    /* ---------- progress bar (6px pulsing) ---------- */
-    /* ---------- progress bar (blue gradient, slow pulse, bright glow) ---------- */
 #progressBar {
   position: fixed;
   top: 0;
   left: 0;
   height: 6px;
   width: 0%;
-  background: linear-gradient(90deg, #4defe1ff, #00bfff); /* dark → light blue */
-  box-shadow: 0 0 25px rgba(0, 191, 255, 0.6); /* brighter glow */
+  background: linear-gradient(90deg, #4defe1ff, #00bfff); 
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.6); 
   z-index: 7000;
   border-radius: 0 6px 6px 0;
   transition: width 0.2s linear, opacity 0.8s ease;
-  animation: pbPulse 5s ease-in-out infinite; /* slower pulse */
+  animation: pbPulse 5s ease-in-out infinite; 
   opacity: 1;
   pointer-events: none;
 }
-
 @keyframes pbPulse {
   0%, 100% {
     filter: drop-shadow(0 0 15px rgba(92, 227, 245, 0.66));
@@ -126,16 +107,11 @@
     filter: drop-shadow(0 0 40px rgba(0, 191, 255, 0.9));
   }
 }
-
-/* dark mode adjustment */
 body.dark #progressBar {
   background: linear-gradient(90deg, #58f8c5ff, #33ccff);
   box-shadow: 0 0 35px rgba(112, 239, 251, 0.8);
 }
-
     body.dark #progressBar{ box-shadow: 0 0 24px rgba(139,92,246,0.12); }
-
-    /* ---------- subtle blurred orbs background ---------- */
     .bg-orbs{ position:fixed; inset:0; z-index:-2; pointer-events:none; overflow:hidden; }
     .orb{
       position:absolute; border-radius:50%; filter: blur(36px); opacity: .6; mix-blend-mode:screen;
@@ -145,12 +121,9 @@ body.dark #progressBar {
     .orb.o1{ width:260px; height:260px; left:6%; top:8%; background: rgba(0,198,255,0.18); }
     .orb.o2{ width:320px; height:320px; right:6%; bottom:12%; background: rgba(11,122,255,0.14); }
     .orb.o3{ width:180px; height:180px; left:22%; bottom:18%; background: rgba(139,92,246,0.12); }
-
     body.dark .orb.o1{ background: rgba(0,198,255,0.11); filter: blur(52px); opacity:.46 }
     body.dark .orb.o2{ background: rgba(11,122,255,0.09); filter: blur(56px); opacity:.42 }
     body.dark .orb.o3{ background: rgba(139,92,246,0.08); filter: blur(48px); opacity:.38 }
-
-    /* ---------- header ---------- */
     header{
       position:fixed; top:0; left:0; right:0; height:72px; display:flex; align-items:center; justify-content:space-between;
       padding:12px 48px; background: rgba(255,255,255,0.86); backdrop-filter: blur(8px); z-index:3000;
@@ -158,40 +131,29 @@ body.dark #progressBar {
       transition: background .35s ease;
     }
     body.dark header{ background: rgba(18,22,28,0.7); box-shadow: 0 8px 28px rgba(0,0,0,.6) }
-
     .logo{ display:flex; gap:12px; align-items:center; perspective:700px; }
     .logo-img{ width:72px; height:auto; transition: transform .45s cubic-bezier(.2,.9,.3,1) }
     .logo:hover .logo-img{ transform: rotateY(12deg) rotateX(6deg) scale(1.03) }
     .logo-text{ font-family:'Trebuchet MS',sans-serif; font-size:1.6rem; color:var(--accent-1); font-weight:700 }
     body.dark .logo-text{ color:#9be9ff }
-
     nav{ display:flex; gap:22px; align-items:center; font-weight:600 }
     nav a{ color:inherit; text-decoration:none; padding:6px 2px; position:relative; transition: color .2s }
     nav a::after{ content:""; position:absolute; left:0; bottom:-8px; height:3px; width:0; background: linear-gradient(90deg,var(--accent-1),var(--accent-2)); border-radius:3px; transition: width .28s }
     nav a:hover::after{ width:100%; box-shadow: 0 8px 20px rgba(0,183,255,0.08) }
-
-    /* ---------- theme toggle ---------- */
     .toggle-container{ display:flex; gap:10px; align-items:center }
     .toggle-btn{ width:50px; height:26px; border-radius:99px; background:#d6d6d6; position:relative; cursor:pointer }
     .toggle-btn::before{ content:""; position:absolute; left:3px; top:3px; width:20px; height:20px; background:#fff; border-radius:50%; transition: transform .28s }
     body.dark .toggle-btn{ background: linear-gradient(90deg,var(--accent-1),var(--accent-2)) }
     body.dark .toggle-btn::before{ transform: translateX(24px); background:#06121a }
-
     .toggle-text{ font-size:.9rem; color:var(--muted) }
     body.dark .toggle-text{ color:#dff5ff }
-
-    /* ---------- main & reveal ---------- */
     main{ padding-top:96px }
     section{ padding:88px 6%; text-align:center; opacity:0; transform: translateY(36px); transition: opacity .9s ease, transform .9s cubic-bezier(.2,.9,.25,1) }
     section.visible{ opacity:1; transform: translateY(0) }
-
-    /* ---------- hero ---------- */
     .hero{ min-height:calc(100vh - 108px); display:flex; flex-direction:column; gap:14px; align-items:center; justify-content:center; text-align:center; }
     .hero h1{ font-size:2.6rem; color:var(--accent-1); line-height:1.02; }
     .hero p{ max-width:760px; color:#444; line-height:1.6 }
     body.dark .hero h1, body.dark .hero p{ color:var(--text-dark) }
-
-    /* ---------- cards ---------- */
     .cards{ display:flex; gap:22px; justify-content:center; flex-wrap:wrap; margin-top:26px }
     .card{
       width:280px; padding:26px; border-radius:14px; background:#fff; color:#111; box-shadow:0 10px 30px rgba(6,18,40,.06);
@@ -204,13 +166,8 @@ body.dark #progressBar {
       box-shadow: 0 30px 80px rgba(0,123,255,0.12);
       filter: drop-shadow(0 14px 40px rgba(0,123,255,0.06));
     }
-
-    
-
     body.dark .card{ background:#1f2430; color:var(--text-dark); box-shadow: 0 10px 30px rgba(0,0,0,.6) }
     body.dark .card:hover{ box-shadow: 0 36px 90px rgba(88,120,255,0.10); filter: drop-shadow(0 16px 48px rgba(88,120,255,0.06)) }
-
-    /* ---------- download btn ---------- */
     .download-section{ margin:64px 0; text-align:center }
     .download-btn {
   display: inline-block;
@@ -222,79 +179,59 @@ body.dark #progressBar {
   font-weight: bold;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .download-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
 }
-
-    /* ---------- team & socials ---------- */
     .team{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:10px }
     .member{ width:220px; padding:16px; border-radius:12px; background:#fff; color:#111; box-shadow: 0 10px 30px rgba(6,18,40,.05); transition: transform .28s, box-shadow .28s; overflow:visible }
     .member h3{ margin-bottom:6px; color:#0a2d6c }
     .member p{ color:#555 }
     body.dark .member{ background:#10131a; color:var(--text-dark); box-shadow: 0 10px 30px rgba(0,0,0,.52) }
     .member:hover{ transform: translateY(-8px); z-index:40; box-shadow: 0 26px 70px rgba(0,123,255,.12) }
-
     .socials{ display:flex; gap:10px; justify-content:center; margin-top:10px; opacity:0; transform: translateY(6px); transition: all .32s ease }
     .member:hover .socials, .member:focus-within .socials{ opacity:1; transform: translateY(0) }
-
     .social-btn{
       width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center;
       border-radius:10px; background: linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#fff;
       text-decoration:none; box-shadow: 0 8px 28px rgba(0,123,255,0.10); transition: transform .22s, box-shadow .22s, opacity .2s;
     }
-    /* Instagram hover effect */
 .social-btn[title="Instagram"] {
-  background: #000; /* default */
+  background: #000;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
 .social-btn[title="Instagram"]:hover {
   background: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png') center/cover no-repeat;
   transform: scale(1.1);
 }
-
 .social-btn[title="Instagram"] svg {
   transition: opacity 0.3s ease;
 }
-
 .social-btn[title="Instagram"]:hover svg {
   opacity: 0;
 }
-
 .social-btn[title="Instagram"]:hover {
   box-shadow: 0 0 20px rgba(255, 64, 128, 0.5);
 }
-
-/* LinkedIn hover effect */
 .social-btn[title="LinkedIn"] {
-  background: #000; /* default */
+  background: #000; 
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
 }
-
 .social-btn[title="LinkedIn"]:hover {
   background: url('https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg') center/cover no-repeat;
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(10, 102, 194, 0.5);
 }
-
 .social-btn[title="LinkedIn"] svg {
   transition: opacity 0.3s ease;
 }
-
 .social-btn[title="LinkedIn"]:hover svg {
   opacity: 0;
 }
-
-
-    
-
-    /* ---------- feedback animated button ---------- */
     .feedback-btn{
       display:inline-block; margin-top:14px; padding:10px 28px; border-radius:30px; font-weight:700;
       background: linear-gradient(90deg,var(--accent-1),var(--accent-2)); color:#fff; text-decoration:none;
@@ -302,18 +239,12 @@ body.dark #progressBar {
       transform-origin:center; transition: transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;
     }
     .feedback-btn:hover{ transform: translateY(-6px); box-shadow: 0 30px 90px rgba(0,123,255,0.18) }
-    /* subtle micro-bounce */
     .feedback-btn:active{ transform: translateY(-2px) scale(.995) }
-
-    /* small helpers */
     .muted{ color:var(--muted); }
     .center{text-align:center}
-
     @media (max-width:900px){
       header{ padding:12px 16px } .logo-img{ width:56px } .logo-text{ font-size:1.05rem } section{ padding:54px 6% } .cards{ gap:16px } .card{ width:100% }
     }
-    /* === Fix for Dark Mode Cards === */
-/* === Corrected Dark Mode Styles for Cards & Team Members === */
 body.dark .card,
 body.dark .member {
   background: linear-gradient(145deg, #1b1b1b, #262a30);
@@ -321,25 +252,20 @@ body.dark .member {
   box-shadow: 0 0 25px rgba(0, 123, 255, 0.1);
   transition: all 0.4s ease;
 }
-
 body.dark .card h3,
 body.dark .member h3 {
   color: #9be9ff;
 }
-
 body.dark .card p,
 body.dark .member p {
   color: #d0e7ff;
 }
-
 body.dark .card:hover,
 body.dark .member:hover {
   box-shadow: 0 0 40px rgba(0, 198, 255, 0.25);
   transform: translateY(-6px);
   filter: brightness(1.1);
 }
-
-/* ---------- Responsive Design ---------- */
 @media (max-width: 1024px) {
   section {
     padding: 60px 5%;
@@ -353,7 +279,6 @@ body.dark .member:hover {
     margin: 15px auto;
   }
 }
-
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;
@@ -376,7 +301,6 @@ body.dark .member:hover {
     display: block;
   }
 }
-
 @media (max-width: 480px) {
   h1 {
     font-size: 1.8rem;
@@ -391,8 +315,6 @@ body.dark .member:hover {
     padding: 15px;
   }
 }
-
-/* ---------- Mobile header fix ---------- */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -423,92 +345,67 @@ body.dark .member:hover {
     align-self: center;
   }
 }
-
-/* ---------- Space below feedback button ---------- */
 footer {
   padding-bottom: 40px;
 }
-
 .intro-screen {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.6s ease, visibility 0.6s ease;
 }
-
 .intro-screen.play-intro {
   opacity: 1;
   visibility: visible;
   animation: introSequence 3s ease forwards;
 }
-
 @keyframes introSequence {
   0% { opacity: 1; }
   80% { opacity: 1; }
   100% { opacity: 0; visibility: hidden; }
 }
-
-
   </style>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
 </head>
 <body>
-
   <body>
-  <!-- Loading Screen -->
   <div id="preloader">
   <div class="loader">
     <div class="spinner"></div>
     <p>Loading AIspire...</p>
   </div>
 </div>
-
   <div id="particles-js"></div>
-
-  <!-- top progress -->
   <div id="progressBar" aria-hidden="true"></div>
-
-  <!-- orbs -->
   <div class="bg-orbs" aria-hidden="true">
     <div id="orb1" class="orb o1"></div>
     <div id="orb2" class="orb o2"></div>
     <div id="orb3" class="orb o3"></div>
   </div>
-
-  <!-- header -->
   <header>
     <div class="logo" role="img" aria-label="AIspire logo">
       <img src="logo.png" alt="AIspire Logo" class="logo-img">
       <div class="logo-text">AIspire</div>
     </div>
-
     <nav aria-label="Primary">
       <a href="#problem">Problem</a>
       <a href="#why">Why Us</a>
       <a href="#team">Team</a>
     </nav>
-
     <div class="toggle-container" role="group" aria-label="Theme toggle">
       <div id="toggle" class="toggle-btn" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle theme"></div>
       <div class="toggle-text" id="toggleText">Switch to Dark Mode</div>
     </div>
   </header>
-
   <main>
     <!-- CODED AND DEVELOPED BY SUMIT D SONI -->
-    <!-- hero -->
     <section class="hero" id="home">
       <h1>Empowering Every Student with AI</h1>
       <p>AIspire helps secondary-level students explore their potential through aptitude tests, AI-driven counselling, and clear career pathways toward success.</p>
     </section>
-
-    <!-- problem -->
     <section id="problem">
       <h2>The Problem We Solve</h2>
       <p>Many students at the secondary level struggle with making informed career choices due to lack of access to guidance and understanding of their own strengths. AIspire bridges this gap by combining aptitude testing with AI insights, giving every student equal access to a brighter future.</p>
     </section>
-
-    <!-- why -->
     <section id="why">
       <h2>Why Choose AIspire?</h2>
       <div class="cards" role="list">
@@ -516,48 +413,36 @@ footer {
           <h3>🎯 Personalized Guidance</h3>
           <p>AI tailors advice to each student’s strengths, interests, and goals.</p>
         </article>
-
         <article class="card" role="listitem" tabindex="0">
           <h3>🧩 Career Pathways</h3>
           <p>Understand clear steps to achieve your dream career, backed by AI insights.</p>
         </article>
-
         <article class="card" role="listitem" tabindex="0">
           <h3>💬 Smart Counselling</h3>
           <p>Receive AI-powered recommendations to make confident, informed choices.</p>
         </article>
       </div>
     </section>
-
-    <!-- download -->
    <section class="download-section" aria-labelledby="downloadTitle">
   <h2 id="downloadTitle" class="center">Get AIspire</h2>
   <div class="center">
     <a href="AIspire_Setup.exe" download class="download-btn">Download AIspire</a>
   </div>
 </section>
-
-
-    <!-- team -->
     <section id="team">
       <h2>Our Team</h2>
       <div class="team" role="list">
-        <!-- member 1 -->
         <div class="member" role="listitem" tabindex="0">
           <h3>Sumit D. Soni</h3><p>Developer</p>
           <div class="socials">
             <a class="social-btn" href="https://www.linkedin.com/in/sumit-soni-554776306?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="Sumit LinkedIn" title="LinkedIn">
-              <!-- LinkedIn SVG -->
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9 9h3.8v1.6h.1c.5-.95 1.72-1.95 3.54-1.95C20.2 8.65 21 10.6 21 13.6V21h-4v-6.2c0-1.5-.03-3.45-2.1-3.45-2.1 0-2.42 1.64-2.42 3.35V21H9z" fill="#fff"/></svg>
             </a>
             <a class="social-btn" href="https://www.instagram.com/honeyakasumit/?hl=en" target="_blank" aria-label="Sumit Instagram" title="Instagram">
-              <!-- GitHub SVG -->
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C7 2 4 6 4 10c0 4 3 7 8 7 5 0 8-3 8-7 0-4-3-8-8-8z" fill="#fff"/></svg>
             </a>
           </div>
         </div>
-
-        <!-- member 2 -->
         <div class="member" role="listitem" tabindex="0">
           <h3>Saad Ansari</h3><p>Developer</p>
           <div class="socials">
@@ -565,8 +450,6 @@ footer {
             <a class="social-btn" href="https://www.instagram.com/no.1_inocnt_boy_?igsh=bGJrb3FkaHJjMGU4" aria-label="Saad Instagram" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C7 2 4 6 4 10c0 4 3 7 8 7 5 0 8-3 8-7 0-4-3-8-8-8z" fill="#fff"/></svg></a>
           </div>
         </div>
-
-        <!-- member 3 -->
         <div class="member" role="listitem" tabindex="0">
           <h3>Farhan Ansari</h3><p>Feedback Form & Documentation</p>
           <div class="socials">
@@ -574,8 +457,6 @@ footer {
             <a class="social-btn" href="https://www.instagram.com/farhan__7486?igsh=MTZwajAzc2txY2h5OA==" aria-label="Farhan Instagram" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C7 2 4 6 4 10c0 4 3 7 8 7 5 0 8-3 8-7 0-4-3-8-8-8z" fill="#fff"/></svg></a>
           </div>
         </div>
-
-        <!-- member 4 -->
         <div class="member" role="listitem" tabindex="0">
           <h3>Jayesh Kumar Dewangan</h3><p>Feedback Form & Documentation</p>
           <div class="socials">
@@ -583,8 +464,6 @@ footer {
             <a class="social-btn" href="https://www.instagram.com/its_jkd_here?igsh=MWFjMmN2NmZjcW52ZA==" aria-label="Jayesh Instagram" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C7 2 4 6 4 10c0 4 3 7 8 7 5 0 8-3 8-7 0-4-3-8-8-8z" fill="#fff"/></svg></a>
           </div>
         </div>
-
-        <!-- member 5 -->
         <div class="member" role="listitem" tabindex="0">
           <h3>Ansh Chandravanshi</h3><p>Support & Coordination</p>
           <div class="socials">
@@ -594,16 +473,12 @@ footer {
         </div>
       </div>
     </section>
-
-    <!-- footer -->
     <footer id="contact" class="center">
       <p class="muted">© 2025 AIspire | All Rights Reserved</p>
       <a class="feedback-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeUuENqaryBWvriD6YlcGsH8x4xmuUVmOHPzXBEkL5RxLVQQA/viewform?usp=header" target="_blank" rel="noopener">Give Feedback</a>
     </footer>
   </main>
-
   <script>
-    /* ========== Progress bar behavior ========== */
     const progressBar = document.getElementById('progressBar');
     function updateProgress(){
       const scrollTop = window.scrollY || window.pageYOffset;
@@ -615,8 +490,6 @@ footer {
     window.addEventListener('scroll', updateProgress, { passive: true });
     window.addEventListener('resize', updateProgress);
     updateProgress();
-
-    /* ========== Dark mode toggle (persist) ========== */
     const toggle = document.getElementById('toggle');
     const toggleText = document.getElementById('toggleText');
     const bodyEl = document.body;
@@ -634,15 +507,11 @@ footer {
       refreshToggle();
     });
     toggle.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle.click(); } });
-
-    /* ========== Reveal sections (IntersectionObserver) ========== */
     const sections = document.querySelectorAll('main section');
     const io = new IntersectionObserver(entries => {
       entries.forEach(en => en.target.classList.toggle('visible', en.isIntersecting));
     }, { threshold: .16 });
     sections.forEach(s => io.observe(s));
-
-    /* ========== Calm orbs motion (slow, soft blur & small drift) ========== */
     const orbEls = [
       {el: document.getElementById('orb1'), baseX: 6, baseY: 8, amp: 18},
       {el: document.getElementById('orb2'), baseX: 78, baseY: 70, amp: 14},
@@ -660,8 +529,6 @@ footer {
     }
     setOrbBases();
     window.addEventListener('resize', setOrbBases);
-
-    // RAF loop for gentle motion + blur tied to small velocity
     let lastScroll = window.scrollY;
     let lastTime = performance.now();
     let smoothVel = 0;
@@ -684,18 +551,13 @@ footer {
         o.el.style.filter = `blur(${12 + blur}px)`;
         o.el.style.opacity = Math.max(0.28, 0.65 - Math.abs(smoothVel)*0.05);
       });
-
-      requestAnimationFrame(orbRAF);
+       requestAnimationFrame(orbRAF);
     }
     requestAnimationFrame(orbRAF);
-
-    /* ========== Keyboard focus for socials reveal ========== */
     document.querySelectorAll('.member').forEach(m=>{
       m.addEventListener('focusin', ()=> m.classList.add('focused'));
       m.addEventListener('focusout', ()=> m.classList.remove('focused'));
     });
-
-    /* ========== Small initial triggers ========== */
     setTimeout(()=> window.dispatchEvent(new Event('scroll')), 120);
   </script>
 
@@ -736,37 +598,26 @@ particlesJS("particles-js", {
   "retina_detect": true
 });
 </script>
-
 <script>
-  // Simple parallax effect for hero and background orbs
   window.addEventListener('scroll', function() {
-    const scrollTop = window.pageYOffset;
-    
-    // Move hero text slightly for depth
-    const hero = document.querySelector('.hero');
+    const scrollTop = window.pageYOffset; 
+   const hero = document.querySelector('.hero');
     if (hero) {
       hero.style.transform = `translateY(${scrollTop * 0.2}px)`;
     }
-
-    // Parallax movement for orbs background
     document.querySelectorAll('.orb').forEach((orb, index) => {
       const depth = (index + 1) * 15;
       orb.style.transform = `translateY(${scrollTop / depth}px)`;
     });
   });
 </script>
-
 <script>
   window.addEventListener("load", function() {
     const preloader = document.getElementById("preloader");
     setTimeout(() => {
       preloader.classList.add("fade-out");
-    }, 300); // small delay before fading out
+    }, 300); 
   });
 </script>
-
 </body>
 </html>
-
-
-
